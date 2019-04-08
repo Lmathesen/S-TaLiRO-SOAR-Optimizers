@@ -25,8 +25,8 @@ The S-TaLiRo toolbox is publicly available for download at (https://sites.google
   - SOAR_Taliro_SPSA_parameters.m
   - SOAR_Taliro_FiniteDiff.m
   - SOAR_Taliro_FiniteDiff_parameters.m
-* \[folder\]SOAR_examples 
-  - \[folder\]models 
+* \[folder\] SOAR_examples 
+  - \[folder\] models 
   - staliro_SOAR_navbench_example.m
   - staliro_SOAR_modulator_example.m
 * setup_staliro.m
