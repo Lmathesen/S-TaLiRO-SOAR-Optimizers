@@ -1,4 +1,4 @@
-function [run, history] = SOAR_Taliro(inpRanges,opt)
+function [run, history] = SOAR_Taliro_FiniteDiff(inpRanges,opt)
 % UR_Taliro - Performs random sampling in the state and input spaces.
 %
 % USAGE:
@@ -272,12 +272,14 @@ while(sim_count < nSamples)
             history.samples(sim_count+1:end,:) = [];
         end
         disp(' SOAR_Taliro: FALSIFIED!');
+        save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
         return;
     end
     %check if budget has been exhausted
     if sim_count >= nSamples
         run.nTests = sim_count;
         disp(' SOAR_Talro: Samples Exhausted!');
+        save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
         return;
     end
 
@@ -409,12 +411,14 @@ while(sim_count < nSamples)
                         history.samples(sim_count+1:end,:) = [];
                     end
                     disp(' SOAR_Taliro: FALSIFIED!');
+                    save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                     return;
                 end
                 %check if budget has been exhausted
                 if sim_count >= nSamples
                     run.nTests = sim_count;
                     disp(' SOAR_Talro: Samples Exhausted!');
+                    save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                     return;
                 end
 
@@ -514,12 +518,14 @@ while(sim_count < nSamples)
                     history.samples(sim_count+1:end,:) = [];
                 end
                 disp(' SOAR_Taliro: FALSIFIED!');
+                save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                 return;
             end
             %check if budget has been exhausted
             if sim_count >= nSamples
                 run.nTests = sim_count;
                 disp(' SOAR_Talro: Samples Exhausted!');
+                save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                 return;
             end
         

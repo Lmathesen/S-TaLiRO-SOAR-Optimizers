@@ -273,12 +273,14 @@ while(sim_count < nSamples)
             history.samples(sim_count+1:end,:) = [];
         end
         disp(' SOAR_Taliro: FALSIFIED!');
+        save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
         return;
     end
     %check if budget has been exhausted
     if sim_count >= nSamples
         run.nTests = sim_count;
         disp(' SOAR_Talro: Samples Exhausted!');
+        save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
         return;
     end
 
@@ -361,7 +363,7 @@ while(sim_count < nSamples)
                         end
                     end
                 end
-                %check if best value is falsifying or if , if so, exit as necessary
+                %check if best value is falsifyin , if so, exit as necessary
                 if (fcn_cmp(bestCost,0) && StopCond)
                     run.falsified = 1;
                     run.nTests = sim_count;
@@ -376,12 +378,14 @@ while(sim_count < nSamples)
                         history.samples(sim_count+1:end,:) = [];
                     end
                     disp(' SOAR_Taliro: FALSIFIED!');
+                    save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                     return;
                 end
                 %check if budget has been exhausted
                 if sim_count >= nSamples
                     run.nTests = sim_count;
                     disp(' SOAR_Talro: Samples Exhausted!');
+                    save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                     return;
                 end
             all_x = [all_x; x0_forward];
@@ -439,12 +443,14 @@ while(sim_count < nSamples)
                         history.samples(sim_count+1:end,:) = [];
                     end
                     disp(' SOAR_Taliro: FALSIFIED!');
+                    save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                     return;
                 end
                 %check if budget has been exhausted
                 if sim_count >= nSamples
                     run.nTests = sim_count;
                     disp(' SOAR_Talro: Samples Exhausted!');
+                    save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                     return;
                 end
             all_x = [all_x; x0_backward];
@@ -534,12 +540,14 @@ while(sim_count < nSamples)
                         history.samples(sim_count+1:end,:) = [];
                     end
                     disp(' SOAR_Taliro: FALSIFIED!');
+                    save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                     return;
                 end
                 %check if budget has been exhausted
                 if sim_count >= nSamples
                     run.nTests = sim_count;
                     disp(' SOAR_Talro: Samples Exhausted!');
+                    save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
                     return;
                 end
             all_x = [all_x; x1];
@@ -564,6 +572,7 @@ while(sim_count < nSamples)
            display(sim_count);
        end
        
+% % below is an alternative criteria to determine local search restart
 %        improvement = (f0-f1);
 %        range = max(all_y) - min(all_y);
 %        adjustment = norminv(.05,0,range/4);
@@ -584,9 +593,11 @@ while(sim_count < nSamples)
 %            end
 %            display(sim_count);
 %        end
+
    end
 end
 disp(' SOAR_Talro: Samples Exhausted!');
+save(['FinGlobalMod_',num2str(repNum)],'GPmod','yTrain')
 run.nTests = nSamples; 
 end
 

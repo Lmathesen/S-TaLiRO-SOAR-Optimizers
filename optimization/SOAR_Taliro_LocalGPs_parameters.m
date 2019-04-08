@@ -13,7 +13,7 @@
 %                              
 % E.g., to change the number of tests:
 %
-% ur_params.n_tests = 10;
+% SOAR_Taliro_LocalGPs_parameters.n_tests = 10;
 % 
 % See also: staliro_options, UR_Taliro
 
