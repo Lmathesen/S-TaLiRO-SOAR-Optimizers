@@ -14,9 +14,9 @@ The S-TaLiRo toolbox is publicly available for download at (https://sites.google
  * **Giulia Pedrielli** giulia.pedrieli@asu.edu - *Arizona State Univeristy* 
 
 ## Contents:
-* optimization \[folder\]
-  - auxiliary \[folder\]
-    - Global_Kriging \[folder\]
+* \[folder\]optimization 
+  - \[folder\] auxiliary 
+    - \[folder\] Global_Kriging 
   - SOAR_Taliro_LocalGPs.m
   - SOAR_Taliro_LocalGPs_parameters.m
   - SOAR_Taliro_2SPSA.m
@@ -25,11 +25,13 @@ The S-TaLiRo toolbox is publicly available for download at (https://sites.google
   - SOAR_Taliro_SPSA_parameters.m
   - SOAR_Taliro_FiniteDiff.m
   - SOAR_Taliro_FiniteDiff_parameters.m
-* SOAR_examples \[folder\]
-  - models \[folder]\
+* \[folder\]SOAR_examples 
+  - \[folder\]models 
   - staliro_SOAR_navbench_example.m
   - staliro_SOAR_modulator_example.m
 * setup_staliro.m
+* SOAR_S-TaLiRo_Algorithms.pdf
+* README.md
   
 ## Installation
 _\*Note, the Matlab Global Optimization toolbox is needed. Please add this toolbox if has not been previously installed._
@@ -54,7 +56,7 @@ Detailed Install:
    - This folder also contains all of the Simulink models, in the `models` folder, that are necessary for the examples to be executed.
    
 ## Example Executions
-Two example executions of the four SOAR optimizers are included in the `SOAR_examples` folder:
+Two example executions of the four SOAR optimizers are included in the `SOAR_examples` folder. First execute the `setup_staliro.m` script and then explore the examples below:
   
 1. `staliro_SOAR_navbench_example.m` executes over the Navigation benchmarking model, which is a four dimensional problem consisting of a single input signal with three control points over time and an initial condition. 
 This is a model with a hybrid distance metric, such that the `MatlabBGl` is required for successful execution. Further note that the SOAR optimizers currently only support scalar distances so the option `opt.map2line = 1;` in line 159 is critical.
