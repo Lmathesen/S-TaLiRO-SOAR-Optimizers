@@ -14,7 +14,6 @@ The S-TaLiRo toolbox is publicly available for download at (https://sites.google
  * **Giulia Pedrielli** giulia.pedrieli@asu.edu - *Arizona State Univeristy* 
 
 ## Contents:
-```
 * optimization \[folder\]
   - auxiliary \[folder\]
     - Global_Kriging \[folder\]
@@ -31,7 +30,6 @@ The S-TaLiRo toolbox is publicly available for download at (https://sites.google
   - staliro_SOAR_navbench_example.m
   - staliro_SOAR_modulator_example.m
 * setup_staliro.m
-```
   
 ## Installation
 _\*Note, the Matlab Global Optimization toolbox is needed. Please add this toolbox if has not been previously installed._
@@ -44,7 +42,7 @@ Quick Install:
 Detailed Install: 
 1. Ensure you have a working version of S-TaLiRo on your machine.
    - If you have never used S-TaLiRO, download and install from this [page](https://sites.google.com/a/asu.edu/s-taliro/s-taliro/download).
-   - Execute a demo from the demos folder to verify correct installation; see this [quick guide](https://df1a2e36-a-0c9971f9-s-sites.googlegroups.com/a/asu.edu/s-taliro/s_taliro_v1_5_quick_guide_v1.pdf?attachauth=ANoY7crkl8lbPPFogHSzGu0vA7JenfGNm5_ZoIbnlN7dAcC1zy9ZAqQ_PPXzBy_vsR3Z3FsGqwMNTslvN2W4IQqNPH5JL0DNV-UTw5OKMxlFqjFD5vVFO-HdKfNP0kNHnAXWsx_MUm7T3Y6QgHHCGHauQjItbdOOZuTmemyOdo0mX5UuRI4yvzj2VfXT1PLrhgCozn-NxJV5IB13W37-z-XFZ_bIcB-tPT-F8UmthNZyN9RnlLGXRys%3D&attredirects=0) for more information on the demos.
+   - Execute a demo from the demos folder to verify correct installation; see this [quick guide](https://df1a2e36-a-0c9971f9-s-sites.googlegroups.com/a/asu.edu/s-taliro/s_taliro_v1_5_quick_guide_v1.pdf?attachauth=ANoY7crkl8lbPPFogHSzGu0vA7JenfGNm5_ZoIbnlN7dAcC1zy9ZAqQ_PPXzBy_vsR3Z3FsGqwMNTslvN2W4IQqNPH5JL0DNV-UTw5OKMxlFqjFD5vVFO-HdKfNP0kNHnAXWsx_MUm7T3Y6QgHHCGHauQjItbdOOZuTmemyOdo0mX5UuRI4yvzj2VfXT1PLrhgCozn-NxJV5IB13W37-z-XFZ_bIcB-tPT-F8UmthNZyN9RnlLGXRys%3D&attredirects=0) for more information.
    - *Note, for hybrid distance metric with distances to the location guards the Matlab package [MatlabBGL](https://www.mathworks.com/matlabcentral/fileexchange/10922-matlabbgl) is required.* 
 2. Replace the entire `optimization` folder in the working version of S-TaLio with the folder from this repository.
    - The `optimization` folder from this repository includes all previous optimizers \(and their associated parameter files\) and includes an additional 8 files- an execution and parameter file for each of the new SOAR optimizers.
@@ -76,4 +74,4 @@ Mathesen, L., Yaghoubi, S., Pedrielli, G., & Fainekos, G. (2019). Falsification 
 Mathesen, L., Pedrielli, G., & Ng, S. H. (2017, December). Trust region based stochastic optimization with adaptive restart: A family of global optimization algorithms. In Simulation Conference (WSC), 2017 Winter (pp. 2104-2115). IEEE.
 ```
 
-##### Please contact Logan Mathesen (lmathese@asu) with any question, comments, bugs, or issues found.
+##### Please contact Logan Mathesen (lmathese@asu.edu) with any question, comments, bugs, or issues found.
