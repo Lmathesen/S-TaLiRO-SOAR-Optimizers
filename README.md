@@ -14,7 +14,7 @@ The S-TaLiRo toolbox is publicly available for download at (https://sites.google
  * **Giulia Pedrielli** giulia.pedrieli@asu.edu - *Arizona State Univeristy* 
 
 ## Contents:
-* \[folder\]optimization 
+* \[folder\] optimization 
   - \[folder\] auxiliary 
     - \[folder\] Global_Kriging 
   - SOAR_Taliro_LocalGPs.m
