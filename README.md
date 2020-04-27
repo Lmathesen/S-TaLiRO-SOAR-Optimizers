@@ -29,6 +29,7 @@ The S-TaLiRo toolbox is publicly available for download at (https://sites.google
   - \[folder\] models 
   - staliro_SOAR_navbench_example.m
   - staliro_SOAR_modulator_example.m
+* staliro.m
 * setup_staliro.m
 * SOAR_S-TaLiRo_Algorithms.pdf
 * README.md
@@ -38,6 +39,7 @@ _\*Note, the Matlab Global Optimization toolbox is needed. Please add this toolb
 
 Quick Install: 
 * Replace the `optimization` folder in your current S-TaLiRo `trunk` folder with the one from this repository. 
+* Replace the `staliro.m` file in your current S-TaLiRo `trunk` folder with the one from this repository.
 * Replace the `setup_staliro.m` file in your current S-TaLiRo `trunk` folder with the one from this repository.
 * Add the `SOAR_examples` folder to your current S-TaLiRo `trunk` folder. 
 
@@ -49,9 +51,11 @@ Detailed Install:
 2. Replace the entire `optimization` folder in the working version of S-TaLio with the folder from this repository.
    - The `optimization` folder from this repository includes all previous optimizers \(and their associated parameter files\) and includes an additional 8 files- an execution and parameter file for each of the new SOAR optimizers.
    - The `optimization` folder from this repository includes an updated `auxiliary` folder, that now includes a `sigmoid.m` function file and a `Global_Kriging` folder with all necessary Gaussian process modeling files. 
-3. Replace the `setup_staliro.m` file in your working version of S-TaLiRo with the version from this repository (this file is in the `trunk` folder). 
+3. Replace the `staliro.m` file in your working version of S-TaLiRo with the version from this repository (this file is in the `trunk` folder). 
+   - This new staliro execution file is identical to the standard version downloaded with S-TaLiRo but includes addtional functionality to be compatible with the `SOAR_LocallGPs` optimizer. This addtional functionality enables SOAR to save the final estimated global Kriging model fit during each falsification run.  
+4. Replace the `setup_staliro.m` file in your working version of S-TaLiRo with the version from this repository (this file is in the `trunk` folder). 
    - This new setup file's execution is identical to the previous version but now additionally adds the `Global_Kriging` folder to the working path, such that the SOAR optimizers have access to the Gaussian process modeling files.    
-4. Add the `SOAR_examples` folder to the `trunk` folder of S-TaLiRo. This folder should be at the same level as the `optimization` folder in your S-TaLiRo directory.
+5. Add the `SOAR_examples` folder to the `trunk` folder of S-TaLiRo. This folder should be at the same level as the `optimization` folder in your S-TaLiRo directory.
    - This folder contains example execution scripts that call S-TaLiRo with each of the SOAR optimizers. 
    - This folder also contains all of the Simulink models, in the `models` folder, that are necessary for the examples to be executed.
    
